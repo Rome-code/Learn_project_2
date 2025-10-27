@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e57ee9-be49-4020-a5ee-f1cb659e964d" name="Changes" comment="" />
+    <list default="true" id="b7e57ee9-be49-4020-a5ee-f1cb659e964d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Learn_project_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,18 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Rome-code"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rome-code&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rome-code/learn_project_2",
-    "accountId": "b3b3d30c-e771-42fc-8410-5690bc4ba574"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rome-code/learn_project_2&quot;,
+    &quot;accountId&quot;: &quot;b3b3d30c-e771-42fc-8410-5690bc4ba574&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -48,20 +51,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_category.test_counts_increase.executor": "Run",
-    "Python tests.Python tests for test_main.test_category_initialization.executor": "Run",
-    "Python tests.Python tests for test_main.test_counts_increase.executor": "Run",
-    "Python tests.Python tests for test_main.test_product_initialization.executor": "Run",
-    "Python tests.Python tests in test_main.py.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#1 on features/homework__14.1",
-    "last_opened_file_path": "C:/Users/Rome/PycharmProjects/pythonProject5",
-    "settings.editor.selected.configurable": "vcs.Subversion"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_category.test_counts_increase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_main.test_category_initialization.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_main.test_counts_increase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_main.test_product_initialization.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_main.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on features/homework__14.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rome/PycharmProjects/pythonProject5&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rome\PycharmProjects\pythonProject5" />
