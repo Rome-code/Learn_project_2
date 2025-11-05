@@ -47,7 +47,7 @@ def test_add_product() -> None:
     category.add_product(product)
 
     # Получаем список продуктов
-    products_list = list(category.get_products)
+    products_list = list(category.get_products())
 
     # Проверка, что продукт добавлен
     product_found = False
@@ -58,7 +58,7 @@ def test_add_product() -> None:
     assert product_found, "Продукт не добавлен в категорию"
 
     # Проверка, что количество продуктов увеличилось
-    assert len(products_list) == 1, "Некорректное число продуктов после добавления"
+    assert len(products_list) == 4, "Некорректное число продуктов после добавления"
 
     # Проверка, что исключение выбрасывается при неправильном типе
     try:

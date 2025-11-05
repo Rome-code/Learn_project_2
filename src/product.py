@@ -38,3 +38,9 @@ class Product:
                 return  # отменяет изменение
 
         self.__price = float(price)
+
+    def __str__(self):
+        return f"{self.name}, {self.description}, {self.price}, {self.quantity}"
+
+    def __repr__(self):
+        return self.__str__()
