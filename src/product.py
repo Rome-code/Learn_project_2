@@ -8,6 +8,18 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+
+    def __str__(self):
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
+    def __add__(self, other):
+        if isinstance(other, Product):
+            """сумма произведений цены на количество у обоих объектов"""
+            total_sum = self.price*self.quantity + other.price*other.quantity
+            return total_sum
+
+
+
     @classmethod
     def new_product(cls,product_parameters: dict):
         name = product_parameters["name"]
@@ -38,9 +50,6 @@ class Product:
                 return  # отменяет изменение
 
         self.__price = float(price)
-
-    def __str__(self):
-        return f"{self.name}, {self.description}, {self.price}, {self.quantity}"
 
     def __repr__(self):
         return self.__str__()

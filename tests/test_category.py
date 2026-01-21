@@ -31,6 +31,23 @@ def test_counts_increase() -> None:
     "Проверяем, что счетчики увеличились"
     assert Category.category_count == initial_category_count + 1
 
+    assert Category.product_count == initial_product_count + 1
+
+def test_str_category(capsys):
+    """Создаем несколько продуктов"""
+    product_1 = Product("Prod1", "Desc1", 100.0, 2)
+    product_2 = Product("Prod2", "Desc2", 200.0, 3)
+    products = [product_1, product_2]
+
+    "Создаем категорию"
+    category = Category("Категория", "Описание категории", products)
+
+    """Проверяем строковое отображение для класса Category"""
+    print(str(category))
+    captured = capsys.readouterr()
+    assert captured.out == "Категория, количество продуктов: 5 шт.\n"
+
+
 def test_add_product() -> None:
 
     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
@@ -66,4 +83,5 @@ def test_add_product() -> None:
         assert False, "Ожидалось исключение при добавлении непонятного объекта"
     except TypeError:
         pass  # тест прошел успешно
+
 

@@ -1,4 +1,4 @@
-from src.product import Product
+from itertools import product
 
 class Category:
     """Класс для создания категорий продукции"""
@@ -10,8 +10,14 @@ class Category:
         self.name = name
         self.description = description
         self.__products = products
-
+        
+    """Счетчики для подсчета продуктов в списке products и подсчета категорий"""
         Category.category_count += 1
+        Category.product_count += len(products)
+
+    def __str__(self):
+        products_quantity_sum = sum(product.quantity for product in self.products)
+        return f"{self.name}, количество продуктов: {products_quantity_sum} шт."
 
     @property
     def products(self):
