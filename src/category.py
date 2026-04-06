@@ -1,4 +1,5 @@
-from itertools import product
+# from itertools import product
+from src.product import Product
 
 class Category:
     """Класс для создания категорий продукции"""
@@ -11,7 +12,7 @@ class Category:
         self.description = description
         self.__products = products
         
-    """Счетчики для подсчета продуктов в списке products и подсчета категорий"""
+        """Счетчики для подсчета продуктов в списке products и подсчета категорий"""
         Category.category_count += 1
         Category.product_count += len(products)
 
@@ -31,7 +32,7 @@ class Category:
             Category.product_count += 1
 
         else:
-            raise TypeError("Можно добавлять только объекты класса Product.")
+            raise TypeError(f"Объект {product} недопустим.Можно добавлять только объекты класса Product.")
 
     def get_products(self):
         result = []

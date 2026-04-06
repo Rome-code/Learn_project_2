@@ -13,11 +13,12 @@ class Product:
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     def __add__(self, other):
-        if isinstance(other, Product):
+        if type(self) == type(other):
             """сумма произведений цены на количество у обоих объектов"""
             total_sum = self.price*self.quantity + other.price*other.quantity
             return total_sum
-
+        else:
+            raise TypeError
 
 
     @classmethod
@@ -31,7 +32,7 @@ class Product:
     @property
     def price(self):
         """Возвращает цену товара"""
-        return f"{self.__price}"
+        return self.__price
 
     @price.setter
     def price(self, price):
@@ -53,3 +54,80 @@ class Product:
 
     def __repr__(self):
         return self.__str__()
+
+
+class Smartphone(Product):
+    """Класс категории товаров «Смартфон»"""
+    def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity)
+        self.efficiency = efficiency #производительность
+        self.model = model
+        self.memory = memory    #объем встроенной памяти
+        self.color = color
+
+    def __add__(self, other):
+
+        if type(self) == type(other):
+            return self.price + other.price
+        else:
+            raise TypeError
+
+
+class Os(Smartphone):
+    """Подкласс категории Smartphone, отражающий деление по операционным системам"""
+    def __init__(self, name, description, price, quantity,operation_system, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity, efficiency, model, memory, color)
+        self.operation_system = operation_system
+        self.efficiency = efficiency  # производительность
+        self.model = model
+        self.memory = memory  # объем встроенной памяти
+        self.color = color
+
+
+class ConnectionSpeed(Smartphone):
+    """Подкласс категории Smartphone, отражающий деление по скорости подключения к интернету"""
+    def __init__(self, name, description, price, quantity, connection_speed, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity, efficiency, model, memory, color)
+        self.connection_speed = connection_speed
+        self.efficiency = efficiency   #производительность
+        self.model = model
+        self.memory = memory    #объем встроенной памяти
+        self.color = color
+
+
+class LawnGrass(Product):
+    """Класс категории товаров «Трава газонная» """
+    def __init__(self,name, description, price, quantity, country, germination_period, color):
+        super().__init__(name, description, price, quantity)
+        self.country = country  # страна-производитель
+        self.germination_period = germination_period    #срок прорастания
+        self.color = color
+
+    def __add__(self, other):
+
+        if type(self) == type(other):
+            return self.price + other.price
+        else:
+            raise TypeError
+
+
+class GrowthHeight(LawnGrass):
+    """Подкласс категории товаров «Трава газонная», отражающий деление по высоте роста """
+    def __init__(self,name, description, price, quantity, country, germination_period, color, growth_height):
+        super().__init__(name, description, price, quantity, country, germination_period, color)
+        self.country = country      # страна-производитель
+        self.germination_period = germination_period    #срок прорастания
+        self.color = color
+        self.growth_height = growth_height
+
+
+class Resistance(LawnGrass):
+    """Подкласс категории товаров «Трава газонная», отражающий деление
+    по зимостойкоси и засухоустойчивости, способности переносить частые стрижки. """
+    def __init__(self,name, description, price, quantity, country, germination_period, color, resistance):
+        super().__init__(name, description, price, quantity,country, germination_period, color)
+        self.country = country  # страна-производитель
+        self.germination_period = germination_period    #срок прорастания
+        self.color = color
+        self.resistance = resistance
+
